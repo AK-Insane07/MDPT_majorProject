@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
