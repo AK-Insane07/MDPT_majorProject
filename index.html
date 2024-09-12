@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MDPT</title>
+        <link rel="stylesheet" href="stylemain.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            .icons{
+                padding-top: 10px;
+            }
+            .icons a{
+                text-decoration: none;
+                color: #fff;
+                position: relative;
+                padding: 10px; 
+               
+            }
+            .icons ion-icon{
+                color: #fff;
+                font-size: 30px;
+                position: relative;
+                left:1.5%;
+            
+                transition: 0.3s ease;
+            }
+            .icons ion-icon:hover{
+                color: #f38d6c;
+            }
+          
+            @keyframes ani1 {
+                0%{
+                    left:0;
+                    transform: translate(-100%);
+                
+                }
+                100%{
+                    left:100%;
+                    transform: translate(0%);
+                }                
+            }
+            @keyframes ani2 {
+                0%{
+                    opacity: 0;
+                    transform: translateX(-40%);
+                }
+                100%{
+                    opacity: 1;
+                    transform: translateX(0%);
+                }
+            }
+            @keyframes ani3 {
+                0%{
+                    opacity: 0;
+                    transform: translateX(40%);
+                }
+                100%{
+                    opacity: 1;
+                    transform: translateX(0%);
+                }
+            }
+            @keyframes movefff {
+                
+            }
+           @media only screen and (max-width:361px),(max-width:394px){
+            .navbar{
+                height: 10vh;
+                display: flex;
+                width: 100vw;
+            }
+
+            .logo_navbar{
+                display: flex;
+                height: 6vh;
+                
+
+            }
+            .menu{
+                width: 88vw;
+                display: flex;
+                position: absolute;
+                left:9%;
+                top: 50%;
+                gap:2;
+                font-size: 9px;
+                padding: 8px;
+            }
+            .video1{
+                width: 100vw;
+                object-fit: cover;
+            }
+            .cont1{
+                top:11% ;
+            }
+            .title1{
+                font-size: 20px;
+                padding-top: 0;padding: 0;
+                
+            }
+            .subtitle_1{
+                font-size: 8px;           
+                width: 26vw; 
+                position: relative;
+                bottom: 12px;         
+                
+            }
+          
+            .para1{
+                width: 95vw;
+                font-size: 7px;
+                position: absolute;
+                bottom: -42px;
+                
+            
+            }
+            .cont2{
+                position: absolute;
+                
+                top:80%;
+                left:4%;
+            }
+            .subtitle2{
+                font-size: 12px;
+                width: 45vw;
+            }
+            .list1{
+                font-size: 8px;
+                width: 95vw;
+                padding-top: 0;
+            }
+            .scroller_img{
+                position: absolute;
+                top: -52%;
+                width: 3vh;
+            }
+            .video-containe{
+                object-fit: contain;
+            }
+            .vid_sec{
+                top:5.5%;
+            }
+            .vid_sec_title{
+                font-size: 15px;
+                width: 90vw;
+                left:8px;
+               
+            }
+            .para2{
+                font-size: 7px;
+                width: 98vw;
+                top:4px;
+                padding: 0%;
+                
+            }
+            .boxes{
+                display: inline;
+            }
+            .box1{
+                height: 15vh;
+                width: 95vw;
+               bottom: 160px;
+            }
+            .box1_title{
+                font-size: 19px;
+                position: absolute;
+                bottom:36px;
+                left: 2%;
+            }
+            .box1_para{
+                font-size: 8px;
+                position: absolute;
+                top: 40%;
+            }
+            .box2{
+                height: 15vh;
+                width: 95vw;
+               bottom: 160px;
+               left: 2%;
+               margin-top: 12px;
+                
+            }
+            .box2_title{
+                font-size: 19px;
+                position: absolute;
+                bottom:36px;
+                left: 2%;
+            }
+            .box2_para{
+                font-size: 8px;
+                position: absolute;
+                top: 40%;
+            }
+
+            .box3{
+                height: 15vh;
+                width: 95vw;
+               bottom: 160px;
+               left: 2%;
+               padding-top: 12px;
+               margin-top: 12px;
+            }
+            .box3_title{
+                font-size: 19px;
+                position: absolute;
+                bottom:36px;
+                left: 2%;
+            }
+            .box3_para{
+                font-size: 8px;
+                position: absolute;
+                top: 40%;
+            }
+            .marqueeobj{
+                font-size: 60px;
+                position: relative;
+                bottom: 80px;
+            }
+            .sec1{
+                height: 80vh;
+                width: 100vw;
+            }
+            
+            .prt_one{
+                width: 100vw;
+  
+            }
+            .vid2{
+                position: absolute;
+                width: 100vw;
+                left: -25%;
+                 
+            }
+            .vid_explaination{
+                left: -22%;
+                border: none;
+            }
+            .vid_explaination_para{
+                font-size: 9px;
+                left: 0;
+                border:none;
+                width: 70vw;
+                position: absolute;
+                padding: 0;
+                top:-100px;
+            }
+            .btn_bt{
+                padding: 4px;
+                left: 0%;
+                top: 12%;
+                position: absolute;
+                width: 25vw;
+                height: 6vh;
+                font-size: 9px;
+            }
+            .btn_tool{
+                padding: 4px;
+                left: 0;
+                top: 0;
+                position: absolute;
+                width: 25vw;
+                height: 6vh;
+                font-size: 9px;
+            }
+            .about_title{
+                font-size: 30px;
+            }
+            .cont{
+                top: 5%;
+                height: 84vh;
+            }
+           
+           .para3{
+            font-size: 10px;
+            padding-top: 8px;
+            width: 80vw;
+            left: 6%;
+            line-height: 25px;
+         
+           }
+           .fot_img{
+            height: 10vh;
+            width: 45vw;
+           }
+           .fot_text1{
+            font-size: 10px;
+           }
+           .icons{
+            font-size: 20px;
+            position:absolute;
+            left: 0.5%;
+            padding: 5px;
+           }
+           .fot_text2{
+            font-size: 22px;
+           
+            position: absolute;
+            top: 74%;
+           }
+           .fot_mid{
+            left: 2%;
+            top: 100%;
+           }
+           .fot_rightside{
+            width: 35vw;
+            top: 12%;
+            left: 60%;
+           }
+           .fot_righttext{
+                font-size: 12px;
+                line-height: 16px;
+           }
+        }
+            
+        </style>
+    </head>
+
+    <body class="bg-black ">
+
+        <div class="wrapper ">
+
+            <header>
+                <nav id="navbar"
+                    class="navbar md:w-full sm:w-full  flex h-[12vh]  fixed top-0 w-[100vw] border-b-[1px] border-slate-600 z-20">
+                    <span
+                        class="absolute bottom-0 h-[2px] w-[55px] bg-transparent bg-gradient-to-r from-black to-white animate-[ani1_3s_linear_infinite]"></span>
+                    <div
+                        class="font-sans text-3xl text-white cursor-pointer logo hover:animate-pulse "><img
+                            src="logo.png" class="logo_navbar h-[12vh] p-0" alt></div>
+                    <ul id="menu"
+                        class="menu flex gap-20 uppercase font-medium w-[30vw] relative left-[20%]  p-8 text-white">
+                        <li><a href="#abut"
+                                class="hover:font-bold hover:underline hover:underline-offset-2">About</a></li>
+                        <li><a href="https://modelmdptoption-kanf9ztsw3sgejjcsvvxml.streamlit.app/"
+                                class="hover:font-bold hover:underline hover:underline-offset-2">MDPT-TOOL</a></li>
+                        <li><a href="#"
+                                class="hover:font-bold hover:underline hover:underline-offset-2">Contact</a></li>
+
+                    </ul>
+                    <div><input type="button" value></div>
+                </nav>
+            </header>
+            <section
+                class="video-section w-[100vw] flex-shrink-0 overflow-hidden">
+                <div class="video-container">
+                    <video src="vid1.mp4" autoplay loop muted
+                        class="video1 h-[100vh] w-[100vw] object-cover z-[-2] relative blur-[2px] "></video>
+                        
+                        <div class="vid_sec absolute  top-[10%] z-[-2] text-white w-[100vw] pg1">
+                            <h1 class="vid_sec_title pt-4 text-5xl font-bold title3 font-open-sans w-[75vw] relative left-6">Understand the Diseases MDPT Can Help You Predict</h1>
+                            <p class="para2 font-open-sans w-[39vw] top-3 relative text-md left-2 p-4">MDPT (Multivariate Disease Prediction Technology) uses advanced data analysis to forecast the risk of various diseases by integrating multiple factors such as genetic information, lifestyle habits, and clinical measurements. For cardiovascular diseases, MDPT evaluates risk through factors like blood pressure and cholesterol levels. For diabetes, it considers blood sugar trends and genetic predispositions. The technology can also predict cancers by analyzing genetic markers and medical history, as well as chronic respiratory and neurological disorders by examining symptoms and environmental exposures. By combining these diverse data points, MDPT provides a comprehensive risk assessment, enabling early intervention and personalized healthcare strategies.</p>
+                                              
+                                               
+                        </div>
+
+                    
+
+                </div>
+
+                   
+
+
+                <div class="boxes z-20 flex h-[40vh] ">
+                    <div class="box1 relative bottom-[110px] w-[30vw] h-[35vh] left-[2%]  border-b-2 border-r-2 border-slate-300  bg-[#5a4f4f67] rounded-xl ">
+                        <h1 class="box1_title text-white text-4xl font-open-sans p-5 font-bold ">Diabetes</h1>
+                        <p class="box1_para text-white font-open-sans pl-2 pr-2 ">Through an in-depth analysis of blood sugar levels, genetic predispositions, lifestyle choices, and obesity indicators, MDPT provides insights into the risk of developing Type 1 and Type 2 diabetes. This proactive approach facilitates early diagnosis and targeted prevention plans..</p>
+                    </div>
+                    <div class="box2 relative bottom-[110px] w-[30vw] h-[35vh] left-[4.5%] border-b-2 border-r-2 border-slate-300  bg-[#5a4f4f67]  rounded-xl">
+                        <h1 class="box2_title text-white text-4xl font-open-sans p-5 font-bold">Kidney Diseases </h1> 
+                        <p class="box2_para text-white font-open-sans pl-2 ">MDPT can also assess the risk of kidney diseases by analyzing factors such as blood pressure, blood sugar levels, kidney function tests, and family history of kidney conditions. This integrated approach helps in early detection of chronic kidney disease, kidney stones, and other renal disorders, facilitating timely treatment and management.</p> 
+                    </div>
+                    <div class="box3 relative bottom-[110px] w-[30vw] h-[35vh] left-[7%] border-b-2 border-r-2 border-slate-300  bg-[#5a4f4f67] rounded-xl ">
+                        <h1 class="box3_title text-white text-4xl font-open-sans p-5 font-bold">Cardiovascular Diseases </h1> 
+                        <p class="box3_para text-white font-open-sans pl-2  ">MDPT assesses cardiovascular health by analyzing blood pressure, cholesterol, heart rate, family history, and lifestyle factors like diet and exercise. This helps identify risks for heart attacks and strokes, allowing for early detection and personalized treatment.</p>
+
+
+                </div>
+                </div>
+
+
+
+                <div class="img-container absolute top-0 h-[100vh] w-[100vw] ">
+                    <img src="window.png" alt
+                        class="img object-cover h-[100%] w-[100%] ">
+                    <div 
+                        class=" cont1 z-20  absolute left-[2%] animate-[ani2_1s_ease-in] top-[20%]">
+                        <h1 class="text-5xl text-white title1 font-open-sans">MDPT</h1>
+                        <span
+                            class="text-2xl text-white uppercase subtitle_1 font-open-sans">Multiple
+                            Disease Prediction Tool</span>
+                        <p
+                            class="para1 text-white font-open-sans relative pt-6  w-[25vw]">At
+                            MDPT, we empower individuals with the ability to
+                            predict potential health risks with ease and
+                            accuracy. Our Multiple Diseases Prediction Tool is
+                            designed to provide you with insights into your
+                            health by analyzing various factors and symptoms.
+                            Whether you're concerned about chronic conditions or
+                            simply want to stay ahead of potential health
+                            issues, MDPT is here to guide you.With just a few inputs, our tool provides you with a comprehensive analysis of potential health risks, helping you take preventive steps and stay ahead of any concerns.</p>
+                    </div>
+                    <div
+                        class="z-20 cont2 absolute font-open-sans  left-[70%] animate-[ani3_1s_ease-in]  top-[20%]">
+                        <h1 class="text-4xl text-white subtitle2">Why Choose MDPT?</h1>
+                        <ul
+                            class="list1 text-white font-open-sans pt-6 list-disc w-[26vw]">
+                            <li>Advanced Prediction Models: We utilize
+                                state-of-the-art algorithms and machine learning
+                                models to analyze your data and predict the
+                                likelihood of various diseases.</li>
+                            <li>User-Friendly Interface: Our platform is
+                                designed with simplicity in mind, making it easy
+                                for anyone to use, regardless of technical
+                                expertise.</li>
+                            <li>Comprehensive Health Insights: MDPT offers
+                                predictions for a wide range of diseases,
+                                helping you understand your health risks and
+                                take proactive measures.</li>
+                            <li>Data Privacy and Security: We prioritize your
+                                privacy. All data entered into MDPT is securely
+                                stored and processed with the highest standards
+                                of confidentiality.</li>
+                        </ul>
+                        <img src="scrollbottom.png" class=" scroller_img absolute z-40 w-[2vw] left-[90%] pt-20 animate-bounce" alt="">
+                    </div>
+                    
+              
+
+                </div>
+
+            </section>
+
+
+            <marquee behavior="" direction="" scrollamount="27" class="marqueeobj z-40 text-white relative  text-[300px] font-open-sans p-2  bg-transparent">MDPT - Multiple Disease Prediction Technology  offers a cutting-edge approach to anticipating and managing health conditions. By leveraging sophisticated data analysis and machine learning, MDPT integrates diverse data sources to provide a comprehensive risk assessment for a range of diseases.</marquee>
+
+
+            <section class="sec1 p-[7rem] h-[100vh] w-[100vw] object-cover">
+                <div class="flex relative  sec1_one">
+                    <div class="prt1 w-[85vw] h-[70vh] relative flex">
+                        <div class="prt_one" >
+                            <video src="demo_vid.mp4" autoplay muted loop class="vid2 w-[55vw] h-[70vh]  left-[2%] " ></video>   </div>
+                            <div class="vid_explaination border-t-2 border-b-2 border-r-2 border-slate-400  absolute top-[6%] left-[65%] rounded-lg w-[25vw] h-[61vh]   ">
+                                <p class="vid_explaination_para text-3xl  text-white font-semibold font-open-sans p-3 ">After getting your reports Doctor or a Patient can manually enter the data to get his/her test Results, results might be in yes or no  .You can access it by simply login and on clicking below MDPT-TOOL button.</p>
+                                <a href="https://modelmdptoption-kanf9ztsw3sgejjcsvvxml.streamlit.app/"> <button class="btn_bt cursor-pointer  font-semibold overflow-hidden relative left-[27%] border-2 bg-black  group px-6 py-2 rounded-lg"><span class=" btn_tool relative z-10 text-white group-hover:text-black group-hover:font-semibold text-xl duration-500">MDPT-TOOL</span>
+                                     <span class="absolute top-0 w-full h-full duration-500 -rotate-45 bg-white -left-32 group-hover:rotate-0 group-hover:left-0"></span>
+                                     <span class="absolute top-0 w-full h-full duration-500 -rotate-45 bg-white -right-32 group-hover:rotate-0 group-hover:right-0"></span></button></a>
+                                  </div>
+                     
+                        
+                    </div>
+
+                </section>
+            </div>
+
+            <section id="abut" class="w-[100vw] h-[100vh] bg-black relative rounded-xl">
+            <div  class="cont h-[66vh] w-[90vw] bg-[#171616ca] absolute top-[18%] left-[4%]">
+                <h1 class="about_title text-[60px] text-center underline underline-offset-4 font-open-sans font-semibold text-white relative">About Us</h1>
+                <div class="about_sec_para">   
+                    <p class="para3 text-lg font-open-sans text-white text-center relative left-[22%] pt-6 w-[50vw]">
+                        The Multiple Disease Prediction Tool is a sophisticated web-based application designed to assist individuals and healthcare professionals in the early detection and management of various diseases. By leveraging advanced machine learning algorithms and vast datasets, the tool provides users with a reliable prediction of potential health conditions based on user input, such as symptoms, lifestyle factors, and medical history.
+                        <br>
+                        <br>
+                  <strong class="text-2xl">Purpose:</strong>
+<br>
+                The primary purpose of this tool is to offer a quick and accessible method for disease screening. Early detection can significantly improve treatment outcomes, reduce healthcare costs, and enhance quality of life. The tool is designed to empower users with actionable insights, allowing them to make informed decisions about their health and seek timely medical advice.
+                    </p>
+
+                </div>
+            </div>                  
+                        
+            </section>
+        
+            <div class="border-2 border-slate-200"></div>
+            <footer class="h-[25vh] w-[100vw] flex ">
+                <div class="lftside relative w-[100vw]">
+                    <img src="logo.png" class="fot_img relative left-[1%] top-[2%]" alt="">
+                    <h1 class="fot_text1 text-white font-open-sans text-xl font-semibold relative  w-[45vw] left-[2%]">Made BY ~ Adarsh.K & Aditi Mishra</h1>
+                    <div class="fot_mid absolute left-[40%] top-[45%] w-[20vw]   ">                       
+                       <h2 class="fot_text2 text-4xl font-open-sans font-semibold text-center  text-white">&copy;MDPT_tool</h2>
+             </div>
+                   <div class="icons relative">
+                    <a href="https://www.facebook.com/login/"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="https://accounts.google.com/"><ion-icon name="logo-google"></ion-icon></a>
+        
+                </div>
+                
+            
+                <div class="fot_rightside absolute w-[15vw] top-[22%] left-[82%]" >
+               <ul class="fot_righttext text-white text-xl font-open-sans font-semibold ">
+                <li class="hover:text-gray-400 hover:scale-105">Privacy Policy</li>
+                <li class="hover:text-gray-400 hover:scale-105">Terms of Service</li>
+                <li class="hover:text-gray-400 hover:scale-105">Services</li>
+                <li class="hover:text-gray-400 hover:scale-105">Join US</li>
+               </ul>
+            </div>
+</div>
+               
+
+            </footer>
+
+        </body>
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.5/ScrollTrigger.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+        <script src="index.js"></script>
+
+    </html>
