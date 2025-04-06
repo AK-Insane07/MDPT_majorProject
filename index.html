@@ -9,16 +9,7 @@
         <link rel="stylesheet" href="stylemain.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-           <script src="https://cdn.tailwindcss.com"></script>
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WGBBYQ729B"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-WGBBYQ729B');
-</script>
+        <script src="https://cdn.tailwindcss.com"></script>
         <link
             href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap"
             rel="stylesheet">
@@ -343,7 +334,7 @@
 
     <body class="bg-black ">
 
-        <div class="wrapper ">
+        <div class="wrapper xs:w-full  sm:w-fit">
 
             <header>
                 <nav id="navbar"
@@ -354,16 +345,21 @@
                         class="font-sans text-3xl text-white cursor-pointer logo hover:animate-pulse "><img
                             src="logo.png" class="logo_navbar h-[12vh] p-0" alt></div>
                     <ul id="menu"
-                        class="menu flex gap-20 uppercase font-medium w-[30vw] relative left-[20%]  p-8 text-white">
+                        class="menu flex gap-20 uppercase font-medium w-[30vw] relative left-[16%]  p-8 text-white">
                         <li><a href="#abut"
                                 class="hover:font-bold hover:underline hover:underline-offset-2">About</a></li>
-                        <li><a href="https://modelmdptoption-kanf9ztsw3sgejjcsvvxml.streamlit.app/"
-                                class="hover:font-bold hover:underline hover:underline-offset-2">MDPT-TOOL</a></li>
+                        <li  onclick="checkLoginBeforeAction()"><a href="https://modelmdptoption-kanf9ztsw3sgejjcsvvxml.streamlit.app/"
+                                class="hover:font-bold hover:underline hover:underline-offset-2">Tool</a></li>
+                        <li><a href="Analysis.html" class="hover:font-bold hover:underline hover:underline-offset-2">Analysis</a></li>
                         <li><a href="#"
                                 class="hover:font-bold hover:underline hover:underline-offset-2">Contact</a></li>
+                             
 
                     </ul>
-                    <div><input type="button" value></div>
+                    <button onclick="login()" class="w-[150px] bg-black h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative left-[40%]
+                    top-[6%] border-2 border-slate-500 text-lg font-semibold font-open-sans overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]">
+                        Login Now!
+                      </button>
                 </nav>
             </header>
             <section
@@ -527,6 +523,64 @@
             </footer>
 
         </body>
+
+
+        <script>
+          
+            function isLoggedIn() {
+                return localStorage.getItem('loggedIn') === 'true';
+            }
+    
+           
+            function login() {
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+    
+                if (username === 'testuser' && password === 'password123') {
+                    localStorage.setItem('loggedIn', 'true');
+                    alert('Login successful!');
+                    hideLoginForm();
+                    checkLoginBeforeAction();
+                } else {
+                    alert('Invalid credentials!');
+                }
+            }
+    
+         
+            function showLoginForm() {
+                document.getElementById('login-form').style.display = 'block';
+            }
+    
+            function hideLoginForm() {
+                document.getElementById('login-form').style.display = 'none';
+            }
+    
+            function checkLoginBeforeAction() {
+                if (isLoggedIn()) {
+                    alert('You are logged in! Proceeding with action...');
+                    // Perform the action here, e.g., redirect to a new page or show some content
+                } else {
+                    alert('You need to log in to perform this action.');
+                    showLoginForm();
+                }
+            }
+    
+       
+            function logout() {
+                localStorage.removeItem('loggedIn');
+                alert('You have been logged out.');
+            }
+    
+            // Automatically check login status on page load
+            window.onload = function () {
+                if (isLoggedIn()) {
+                    hideLoginForm();
+                    alert('Welcome back, you are already logged in!');
+                } else {
+                    showLoginForm();
+                }
+            };
+        </script>
         <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
         <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
         <script
