@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Analysis</title>
+
+</head>
+<style>
+    .icons{
+        padding-top: 10px;
+    }
+    .icons a{
+        text-decoration: none;
+        color: #fff;
+        position: relative;
+        padding: 10px; 
+       
+    }
+    .icons ion-icon{
+        color: #fff;
+        font-size: 30px;
+        position: relative;
+        left:1.5%;
+    
+        transition: 0.3s ease;
+    }
+    .icons ion-icon:hover{
+        color: #f38d6c;
+    }
+  
+    @keyframes ani1 {
+        0%{
+            left:0;
+            transform: translate(-100%);
+        
+        }
+        100%{
+            left:100%;
+            transform: translate(0%);
+        }                
+    }
+    @keyframes ani2 {
+        0%{
+            opacity: 0;
+            transform: translateX(-40%);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0%);
+        }
+    }
+    @keyframes ani3 {
+        0%{
+            opacity: 0;
+            transform: translateX(40%);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0%);
+        }}
+    
+        
+        
+</style>
+<body>
+    
+    <header>
+        <nav id="navbar"
+            class="navbar md:w-full sm:w-full  flex h-[12vh] sticky top-0 w-[100vw] bg-black border-b-[1px] border-slate-600 z-20">
+            <span
+                class="absolute bottom-0 h-[2px] w-[55px] bg-transparent bg-gradient-to-r from-black to-white animate-[ani1_3s_linear_infinite]"></span>
+            <div
+                class="font-sans text-3xl text-white cursor-pointer logo hover:animate-pulse "><img
+                    src="logo.png" class="logo_navbar h-[12vh] p-0" alt></div>
+            <ul id="menu"
+                class="menu flex gap-20 uppercase font-medium w-[30vw] relative left-[20%]  p-8 text-white">
+                <li><a href="#abut"
+                        class="hover:font-bold hover:underline hover:underline-offset-2">About</a></li>
+                <li  onclick="checkLoginBeforeAction()"><a href="https://modelmdptoption-kanf9ztsw3sgejjcsvvxml.streamlit.app/"
+                            class="hover:font-bold hover:underline hover:underline-offset-2">Tool</a></li>
+               
+                <li><a href="index.html"
+                        class="hover:font-bold hover:underline hover:underline-offset-2">Home</a></li>
+                     
+
+            </ul>
+            <button onclick="login()" class="w-[150px] bg-black h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative left-[40%]
+            top-[6%] border-2 border-slate-500 text-lg font-semibold font-open-sans overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]">
+                Login Now!
+              </button>
+        </nav>
+    </header>
+    <section class=" bg-black py-5">
+        <h1 class=" text-5xl font-bold font-open-sans w-[75vw] relative left-4 text-white">MDPT Analysis</h1>
+        <p class=" w-[90vw] font-open-sans top-3 relative text-lg left-2 p-4 text-white" >
+           Welcome to the Multiple Disease Prediction Tool (MDPT) Analysis page!
+            <br>
+
+            This dashboard provides a comprehensive visual analysis of the MDPT project. It highlights key insights from the dataset, model performance, and overall system behavior.
+            <br>
+            Here’s what you’ll find in the analysis:
+            <br>
+            📊 Prediction Summary: <br>
+            Overview of disease predictions across multiple categories based on patient input.
+            <br>
+            
+            🔎 Patient Profile Breakdown: <br>
+            Detailed analysis of age groups, gender distribution, and symptom patterns.
+            <br>
+            🧠 Model Performance Metrics: <br>
+            Accuracy, precision, recall, and F1-score of different machine learning models used in MDPT.
+            <br>
+            ⚙️ System Insights: <br>
+            How input features like symptoms, habits, and clinical parameters influence prediction outcomes.
+            <br>
+            🩺 Disease Trends: <br>
+            Visualization of most frequently predicted diseases and associated risk factors.
+            <br>
+            🌐 Interactive Reports: <br>
+            Clickable, filterable dashboards to explore how different variables impact disease prediction.
+            
+            </p>
+            <img src="AN_img1.png" alt="" class="absolute w-[40%] h-[50%] left-[59%] bottom-[15%]">
+
+    </section>
+    <section class="bg-black h-[110vh] w-full px-40 py-12">
+        <h1 class=" text-6xl font-bold font-open-sans w-[75vw] relative left-[6%] bottom-8 text-white animate-bounce ">Power-BI Dashboard Analysis Report</h1>
+        <iframe title="MDPT_Analysis" width="1200" height="673.5" src="https://app.powerbi.com/view?r=eyJrIjoiODk0NDcyNjQtNDE2ZS00YWRkLWE4N2YtODA1ODUwZDJhOWZjIiwidCI6IjRhNzhmOWQwLWFiZGUtNDBjNC1hMDg4LTBiOTg5NTk5M2M0YSJ9" frameborder="0" allowFullScreen="true" ></iframe>
+        
+    </section>
+
+   
+</body>
+</html>
